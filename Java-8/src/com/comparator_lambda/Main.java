@@ -18,6 +18,7 @@ public class Main {
         System.out.println("Unsorted List: \n" + list);
         Collections.sort(list);
         System.out.println("Ascending Sorted List: \n"+list);
+        // Using Comparator Interface Without Making MyClass class
         Collections.sort(list, (a,b) -> b-a);
         System.out.println("Descending Sorted List: ");
         System.out.print(list);
