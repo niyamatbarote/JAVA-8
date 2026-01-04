@@ -8,6 +8,8 @@ package com.java8;
 
 // general interface can have many abstract methods
 
+import java.sql.SQLOutput;
+
 @FunctionalInterface
 public interface Functional_interface {
     public void sayHello(); //Abstract method (only 1 needed else it's not Functional Interface)
@@ -59,11 +61,13 @@ class Interface_FUnctional implements A {
     public static void main(String[] args) {
         Interface_FUnctional obj = new Interface_FUnctional();
 //        Interface_FUnctional.sayMyName: // This will not work
-        // Calling the methods in Static method
+        // Calling the Static method
         A.sayMyName();
         // calling default Methods
         obj.sayGn();
         B.sayHello();
+        Functional_interface fxn = () -> System.out.println("This is My Functional Interface");
+        fxn.sayHello();
     }
 }
 

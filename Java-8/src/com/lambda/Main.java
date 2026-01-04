@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         // General method to call methods in from Interface
-        Employee employee = new SoftwareEngineer();
-        System.out.println(employee.getName());
+//        Employee employee = new SoftwareEngineer();
+//        System.out.println(employee.getName());
 
         // Calling using Interface:-
         // Using Lambda Fxn we can Directly Use Interface Without Implementing it on a class
