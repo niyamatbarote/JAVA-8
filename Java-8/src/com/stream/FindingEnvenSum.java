@@ -1,6 +1,8 @@
 package com.stream;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class FindingEnvenSum {
     public static void main(String[] args) {
@@ -20,5 +22,17 @@ public class FindingEnvenSum {
         int[] arr2 = {1,2,3,4,5};
         int sum2 = Arrays.stream(arr2).filter(n -> n % 2 == 0).sum();
         System.out.println("The Total of Even Integers in an Array is : "+sum2);
+        Arrays.stream(arr2).filter(x -> x%2==0).map(n -> n*2).forEach(System.out::println);
+
+
+
+
+        List<Integer> num = Arrays.asList(1,2,3,4,5,6);
+        num.stream().filter(n -> n % 2 == 0).map(n -> n*2).forEach(System.out :: println);
+
+        // ForEach Takes the Integer One By One from the Array
+        num.forEach(x -> System.out.print(x));
+
+        Stream<Integer> data = num.stream();
     }
 }
