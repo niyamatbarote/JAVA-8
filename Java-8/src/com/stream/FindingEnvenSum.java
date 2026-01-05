@@ -32,7 +32,13 @@ public class FindingEnvenSum {
 
         // ForEach Takes the Integer One By One from the Array
         num.forEach(x -> System.out.print(x));
-
+        // this will not work: as we can use stream only once
+        num.forEach(x -> System.out.print(x));
         Stream<Integer> data = num.stream();
+        long count= data.count();
+        System.out.println(" Total number of Integers in an Arrays is: \n"+count);
+
+        // below line will give exception bcz we already consumed the stream in above data.count
+//        data.forEach(x -> System.out.println(x));
     }
 }
